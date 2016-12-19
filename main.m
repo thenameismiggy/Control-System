@@ -2,7 +2,7 @@ function main()
 %Main This function shall serve as the main function for the entire system.
 %     All other functions shall stem from this piece of code.
 
-global rodlength printheadoffset columnoffset
+global rodlength printheadoffset columnoffset tooloffset
 
 [File, Path] = uigetfile('*.gcode', 'Select the generated Gcode file');
 
@@ -34,10 +34,12 @@ while (~feof(fid))
                     rodlength = 8.99;
                     printheadoffset = 2.25;
                     columnoffset = 5.62;
+					tooloffset = 0.2953;
                 case 21    %set units to mm
                     rodlength = 22.8346;
                     printheadoffset = 57.15;
                     columnoffset = 14.2748;
+					tooloffset = 7.5;
                 case 28    %move to origin
                 case 90    %set to absolute positioning
                 case 91    %set to relative positioning
