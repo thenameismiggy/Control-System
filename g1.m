@@ -45,7 +45,9 @@ c2[1] = columnoffset * cosd(240);
 c2[2] = columnoffset * sind(240);
 
 %computing for the horizontal length of the rods
-
+aa = sqrt(((a2[1] - a1[1])^2) + ((a2[2] - a1[2])^2));
+ab = sqrt(((b2[1] - b1[1])^2) + ((b2[2] - b1[2])^2));
+ac = sqrt(((c2[1] - c1[1])^2) + ((c2[2] - c1[2])^2));
 
 end
 
