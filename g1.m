@@ -49,5 +49,15 @@ aa = sqrt(((a2[1] - a1[1])^2) + ((a2[2] - a1[2])^2));
 ab = sqrt(((b2[1] - b1[1])^2) + ((b2[2] - b1[2])^2));
 ac = sqrt(((c2[1] - c1[1])^2) + ((c2[2] - c1[2])^2));
 
+%computing for the vertical length of the rods
+ha = sqrt(abs((rodlength^2) - (aa^2)));
+hb = sqrt(abs((rodlength^2) - (ab^2)));
+hc = sqrt(abs((rodlength^2) - (ac^2)));
+
+%computation for final carriage lengths
+out[1] = z + tooloffset + ha;
+out[2] = z + tooloffset + hb;
+out[3] = z + tooloffset + hc;
+
 end
 
