@@ -1,10 +1,18 @@
-function data = g1(numeral)
+function g1(numeral)
 %G1 This function shall initiate whenever the gcode G1 is called.
 %   Parameters are X, Y, and Z for the position to move to, E for the
 %   amount to extrude between starting and ending point, and F for the
 %   feedrate per minute of the move between starting point and ending point
 
-global rodlength printheadoffset columnoffset tooloffset
+global rodlength printheadoffset columnoffset tooloffset previous values
+
+%set default values in case some of the parameters are not set
+x = 0;
+y = 0;
+z = 0;
+e = 0;
+f = 0;
+s = 0;
 
 for count = 3:size(numeral,1)
     if mod(count,2) == 1    %check if not divisible by two
@@ -55,9 +63,9 @@ hb = sqrt(abs((rodlength^2) - (ab^2)));
 hc = sqrt(abs((rodlength^2) - (ac^2)));
 
 %computation for final carriage lengths
-out(1) = z + tooloffset + ha;
-out(2) = z + tooloffset + hb;
-out(3) = z + tooloffset + hc;
+values(1,1) = z + tooloffset + ha;
+values(2,1) = z + tooloffset + hb;
+values(3,1) = z + tooloffset + hc;
 
 end
 

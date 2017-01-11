@@ -2,7 +2,19 @@ function main()
 %Main This function shall serve as the main function for the entire system.
 %     All other functions shall stem from this piece of code.
 
-global rodlength printheadoffset columnoffset tooloffset
+global rodlength printheadoffset columnoffset tooloffset previous values
+
+previous(1) = 0;
+previous(2) = 0;
+previous(3) = 0;
+
+values = zeros(3,1);
+
+%set default constant values in case they are unset
+rodlength = 22.8346;
+printheadoffset = 57.15;
+columnoffset = 14.2748;
+tooloffset = 7.5;
 
 [File, Path] = uigetfile('*.gcode', 'Select the generated Gcode file');
 
@@ -29,7 +41,7 @@ while (~feof(fid))
             numeral = sscanf(currentline, '%c%f %c%f %c%f %c%f %c%f %c%f');
             switch(numeral(2))
                 case 1    %move
-                    data = g1(numeral);
+                    g1(numeral);
                 case 2    %CW controlled arc move
 				    %TODO
                 case 3    %CCW controlled arc move
@@ -58,4 +70,5 @@ while (~feof(fid))
     currentline = fgetl(fid);
 end
 fclose(fid);
+values
 end

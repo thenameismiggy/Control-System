@@ -1,0 +1,48 @@
+Constrained Parts: Joint-1, Rod End Base-3
+Constrain Name: Concentric8
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Joint-2, Rod End Base-3
+Constrain Name: Concentric9
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Joint-2, Rod End Base-3
+Constrain Name: Concentric13
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Joint-1, Rod End Base-3
+Constrain Name: Concentric12
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Joint-1, Rod End Base-3
+Constrain Name: Concentric22
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Joint-2, Rod End Base-3
+Constrain Name: Concentric23
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Rod End Base-4, Joint-1
+Constrain Name: Concentric24
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Rod End Base-4, Joint-2
+Constrain Name: Concentric25
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Rod End Base-4, Joint-3
+Constrain Name: Concentric26
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Rod End Base-4, Joint-4
+Constrain Name: Concentric27
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Rod End Base-4, Joint-6
+Constrain Name: Concentric29
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
+Constrained Parts: Rod End Base-4, Joint-5
+Constrain Name: Concentric28
+Error Details: Unsupported geometry type for one or more constrained parts. A weld joint has been added between the constrained parts.
+---------------------------------------------------------------------------------
