@@ -2,7 +2,7 @@ function main()
 %Main This function shall serve as the main function for the entire system.
 %     All other functions shall stem from this piece of code.
 
-global rodlength printheadoffset columnoffset tooloffset xout yout zout signala signalb signalc x y z e f s
+global rodlength printheadoffset columnoffset tooloffset xout yout zout signala signalb signalc x y z e f
 
 %asks for the gcode file to process
 [File, Path] = uigetfile('*.gcode', 'Select the generated Gcode file');
@@ -27,8 +27,7 @@ x = 0;
 y = 0;
 z = 0;
 e = 0;
-f = 0;
-s = 0;
+f = 6000;
 
 %initializes counter that counts number of G1 commands
 counter = 1;

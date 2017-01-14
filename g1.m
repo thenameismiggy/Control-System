@@ -4,7 +4,7 @@ function counter = g1(numeral, counter)
 %   amount to extrude between starting and ending point, and F for the
 %   feedrate per minute of the move between starting point and ending point
 
-global rodlength printheadoffset columnoffset tooloffset xout yout zout x y z e f s
+global rodlength printheadoffset columnoffset tooloffset xout yout zout x y z e f
 
 for count = 3:size(numeral,1)
     if mod(count,2) == 1    %check if not divisible by two
@@ -17,10 +17,8 @@ for count = 3:size(numeral,1)
                 z = numeral(count + 1);
             case 'E'    %amount to extrude (used as binary by software group)
                 e = numeral(count + 1);
-            case 'F'    %feedrate per minute of the move (not used)
+            case 'F'    %feedrate per minute of the move
                 f = numeral(count + 1);
-            case 'S'    %flag if endstop was hit
-                s = numeral(count + 1);
         end
     end
 end
@@ -55,9 +53,9 @@ hb = sqrt(abs((rodlength^2) - (ab^2)));
 hc = sqrt(abs((rodlength^2) - (ac^2)));
 
 %computation for final carriage lengths
-xout(1, counter) = z + tooloffset + ha;
-yout(1, counter) = z + tooloffset + hb;
-zout(1, counter) = z + tooloffset + hc;
+xout(1, counter) = 463.7886 - (z + tooloffset + ha);
+yout(1, counter) = 463.7886 - (z + tooloffset + hb);
+zout(1, counter) = 463.7886 - (z + tooloffset + hc);
 
 counter = counter + 1;
 
