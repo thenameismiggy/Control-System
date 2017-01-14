@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.33"
+    ComputedModelVersion    "1.35"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,9 +30,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Dot Com"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jan 12 22:19:55 2017"
-  RTWModifiedTimeStamp	  406160385
-  ModelVersionFormat	  "1.%<AutoIncrement:33>"
+  LastModifiedDate	  "Sun Jan 15 00:44:57 2017"
+  RTWModifiedTimeStamp	  406341889
+  ModelVersionFormat	  "1.%<AutoIncrement:35>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -130,7 +130,7 @@ Model {
 	  $ObjectID		  3
 	  Version		  "1.11.0"
 	  StartTime		  "0.0"
-	  StopTime		  "40.0"
+	  StopTime		  "inf"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -798,7 +798,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "83"
+    SIDHighWatermark	    "85"
     Block {
       BlockType		      Reference
       Name		      "Body Sensor"
@@ -1850,8 +1850,8 @@ Model {
       ClassName		      "Ground"
       CoordPosition	      "[0.0186634,0.0298068,0.763791]"
       CoordPositionUnits      "m"
-      StateVectorMgrId	      "1"
-      MachineId		      "[2 0]"
+      StateVectorMgrId	      "0"
+      MachineId		      "[1 0]"
       ShowEnvPort	      on
     }
     Block {
@@ -3041,9 +3041,22 @@ Model {
       DstPort		      1
     }
     Line {
+      LineType		      "Connection"
+      SrcBlock		      "Printhead-2"
+      SrcPort		      RConn1
+      DstBlock		      "Body Sensor"
+      DstPort		      LConn1
+    }
+    Line {
+      SrcBlock		      "Body Sensor"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+    Line {
       SrcBlock		      "From\nWorkspace"
       SrcPort		      1
-      Points		      [95, 0]
+      Points		      [100, 0]
       Branch {
 	DstBlock		"Gain"
 	DstPort			1
@@ -3071,7 +3084,7 @@ Model {
     Line {
       SrcBlock		      "From\nWorkspace2"
       SrcPort		      1
-      Points		      [45, 0; 0, 310]
+      Points		      [40, 0; 0, 310]
       Branch {
 	DstBlock		"Gain2"
 	DstPort			1
@@ -3081,19 +3094,6 @@ Model {
 	DstBlock		"Derivative2"
 	DstPort			1
       }
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Printhead-2"
-      SrcPort		      RConn1
-      DstBlock		      "Body Sensor"
-      DstPort		      LConn1
-    }
-    Line {
-      SrcBlock		      "Body Sensor"
-      SrcPort		      1
-      DstBlock		      "Scope"
-      DstPort		      1
     }
   }
 }

@@ -2,20 +2,8 @@ function main()
 %Main This function shall serve as the main function for the entire system.
 %     All other functions shall stem from this piece of code.
 
-global rodlength printheadoffset columnoffset tooloffset xout yout zout
-global previous signala signalb signalc x y z e f
-
-%asks for the gcode file to process
-[File, Path] = uigetfile('*.gcode', 'Select the generated Gcode file');
-
-%opens gcode file
-fid = fopen(strcat(Path, File));
-while fid == -1    %if open code returns error
-	error('File could not be read. It may be corrupted.');
-end
-
-%reads first line of file
-currentline = fgetl(fid);
+global rodlength printheadoffset columnoffset tooloffset sampling
+global previous signala signalb signalc xout yout zout x y z e f
 
 %sets default values of constants which is in mm
 rodlength = 22.8346;
@@ -29,6 +17,18 @@ y = 0;
 z = 0;
 e = 0;
 f = 2400;
+
+%asks for the gcode file to process
+[File, Path] = uigetfile('*.gcode', 'Select the generated Gcode file');
+
+%opens gcode file
+fid = fopen(strcat(Path, File));
+while fid == -1    %if open code returns error
+	error('File could not be read. It may be corrupted.');
+end
+
+%reads first line of file
+currentline = fgetl(fid);
 
 %initializes counter that counts number of G1 commands
 counter = 1;

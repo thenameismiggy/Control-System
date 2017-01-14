@@ -4,8 +4,8 @@ function counter = g1(numeral, counter)
 %   amount to extrude between starting and ending point, and F for the
 %   feedrate per minute of the move between starting point and ending point
 
-global rodlength printheadoffset columnoffset tooloffset xout yout zout
-global previous x y z e f
+global rodlength printheadoffset columnoffset tooloffset sampling
+global previous xout yout zout x y z e f
 
 for count = 3:size(numeral,1)
     if mod(count,2) == 1    %check if not divisible by two
@@ -18,7 +18,7 @@ for count = 3:size(numeral,1)
                 z = numeral(count + 1);
             case 'E'    %amount to extrude (used as binary by software group)
                 e = numeral(count + 1);
-            case 'F'    %feedrate per minute of the move
+            case 'F'    %feedrate in mm per minute of the move
                 f = numeral(count + 1);
         end
     end
@@ -29,6 +29,11 @@ xtemp = (x - previous(1))^2;
 ytemp = (y - previous(2))^2;
 ztemp = (z - previous(3))^2;
 distance = sqrt(xtemp + ytemp + ztemp);
+
+%computes for time to be taken when traveling to desired point
+time = distance / (f / 60);
+
+%sets value of current point (previous point in next loop)
 previous = [x y z];
 
 %computing for the coordinates of the rod - printhead intersections
