@@ -5,7 +5,7 @@ function counter = g1(numeral, counter)
 %   feedrate per minute of the move between starting point and ending point
 
 global rodlength printheadoffset columnoffset tooloffset xout yout zout
-global x y z e f
+global previous x y z e f
 
 for count = 3:size(numeral,1)
     if mod(count,2) == 1    %check if not divisible by two
@@ -23,6 +23,13 @@ for count = 3:size(numeral,1)
         end
     end
 end
+
+%obtain distance between current point and desired point
+xtemp = (x - previous(1))^2;
+ytemp = (y - previous(2))^2;
+ztemp = (z - previous(3))^2;
+distance = sqrt(xtemp + ytemp + ztemp);
+previous = [x y z];
 
 %computing for the coordinates of the rod - printhead intersections
 a1(1) = x + printheadoffset;

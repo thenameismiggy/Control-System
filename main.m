@@ -3,7 +3,7 @@ function main()
 %     All other functions shall stem from this piece of code.
 
 global rodlength printheadoffset columnoffset tooloffset xout yout zout
-global signala signalb signalc x y z e f
+global previous signala signalb signalc x y z e f
 
 %asks for the gcode file to process
 [File, Path] = uigetfile('*.gcode', 'Select the generated Gcode file');
