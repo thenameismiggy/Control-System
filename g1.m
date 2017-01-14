@@ -4,15 +4,7 @@ function counter = g1(numeral, counter)
 %   amount to extrude between starting and ending point, and F for the
 %   feedrate per minute of the move between starting point and ending point
 
-global rodlength printheadoffset columnoffset tooloffset xout yout zout
-
-%set default values in case some of the parameters are not set
-x = 0;
-y = 0;
-z = 0;
-e = 0;
-f = 0;
-s = 0;
+global rodlength printheadoffset columnoffset tooloffset xout yout zout x y z e f s
 
 for count = 3:size(numeral,1)
     if mod(count,2) == 1    %check if not divisible by two
