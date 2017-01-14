@@ -2,7 +2,7 @@ function main()
 %Main This function shall serve as the main function for the entire system.
 %     All other functions shall stem from this piece of code.
 
-global rodlength printheadoffset columnoffset tooloffset xout yout zout
+global rodlength printheadoffset columnoffset tooloffset xout yout zout signala signalb signalc
 
 %asks for the gcode file to process
 [File, Path] = uigetfile('*.gcode', 'Select the generated Gcode file');
@@ -51,7 +51,7 @@ while (~feof(fid)) %while end of file has not been reached
                     columnoffset = 14.2748;
 					tooloffset = 7.5;
                 case 28    %move to origin
-					%TODO: function that sets printhead to origin if not already
+					previous = [0 0 0];
                 case 90    %set to absolute positioning
 				    %TODO
                 case 91    %set to relative positioning
@@ -73,20 +73,8 @@ for count = 1:size(xout, 2)
 	time(count) = (count * 5) - 5;
 end
 
-%formats data to be used for simulation
-signala.time = time;
-signala.signals.values = xout;
-signala.signals.dimensions = 1;
-signalb.time = time;
-signalb.signals.values = yout;
-signalb.signals.dimensions = 1;
-signalc.time = time;
-signalc.signals.values = zout;
-signalc.signals.dimensions = 1;
-
-%creates file to be used by simulation
-save signala.mat signala;
-save signalb.mat signalb;
-save signalc.mat signalc;
+signala = [time; xout]';
+signalb = [time; yout]';
+signalc = [time; zout]';
 
 end
