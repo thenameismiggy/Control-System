@@ -6,11 +6,22 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.3"
+    ComputedModelVersion    "1.38"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
   SavedCharacterEncoding  "windows-1252"
+  slprops.hdlmdlprops {
+    $PropName		    "HDLParams"
+    $ObjectID		    1
+    Array {
+      Type		      "Cell"
+      Dimension		      2
+      Cell		      "HDLSubsystem"
+      Cell		      "Delta"
+      PropName		      "mdlProps"
+    }
+  }
   SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -21,18 +32,18 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   MaxMDLFileLineLength	  120
   UserBdParams		  "PhysicalModelingChecksum;PhysicalModelingParameterChecksum;PhysicalModelingProducts"
-  PhysicalModelingChecksum "1482905345"
-  PhysicalModelingParameterChecksum "2069823705"
+  PhysicalModelingChecksum "2364759781"
+  PhysicalModelingParameterChecksum "3603927585"
   PhysicalModelingProducts "SimMechanics"
   Created		  "Tue Dec 27 21:18:48 2016"
   Creator		  "Dot Com"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Dot Com"
+  LastModifiedBy	  "Miggy"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Dec 27 21:30:54 2016"
-  RTWModifiedTimeStamp	  404775006
-  ModelVersionFormat	  "1.%<AutoIncrement:3>"
+  LastModifiedDate	  "Tue Jan 17 13:04:48 2017"
+  RTWModifiedTimeStamp	  406554174
+  ModelVersionFormat	  "1.%<AutoIncrement:38>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -66,7 +77,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    1
+    $ObjectID		    2
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "Delta"
     overrideMode_	    [0.0]
@@ -119,13 +130,13 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      2
+      $ObjectID		      3
       Version		      "1.11.0"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  3
+	  $ObjectID		  4
 	  Version		  "1.11.0"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
@@ -159,7 +170,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  4
+	  $ObjectID		  5
 	  Version		  "1.11.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -171,10 +182,10 @@ Model {
 	  LoadInitialState	  off
 	  SaveFinalState	  off
 	  SaveCompleteFinalSimState off
-	  SaveFormat		  "Array"
+	  SaveFormat		  "StructureWithTime"
 	  SignalLoggingSaveFormat "ModelDataLogs"
 	  SaveOutput		  on
-	  SaveState		  off
+	  SaveState		  on
 	  SignalLogging		  on
 	  DSMLogging		  on
 	  InspectSignalLogs	  off
@@ -191,7 +202,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  5
+	  $ObjectID		  6
 	  Version		  "1.11.0"
 	  Array {
 	    Type		    "Cell"
@@ -246,7 +257,7 @@ Model {
 	  AccelParallelForEachSubsystem	on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  6
+	  $ObjectID		  7
 	  Version		  "1.11.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -332,7 +343,7 @@ Model {
 	  SFTransitionOutsideNaturalParentDiag "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  7
+	  $ObjectID		  8
 	  Version		  "1.11.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -369,7 +380,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  8
+	  $ObjectID		  9
 	  Version		  "1.11.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -384,7 +395,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  9
+	  $ObjectID		  10
 	  Version		  "1.11.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
@@ -399,7 +410,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  10
+	  $ObjectID		  11
 	  Version		  "1.11.0"
 	  Array {
 	    Type		    "Cell"
@@ -452,7 +463,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      11
+	      $ObjectID		      12
 	      Version		      "1.11.0"
 	      Array {
 		Type			"Cell"
@@ -517,7 +528,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      12
+	      $ObjectID		      13
 	      Version		      "1.11.0"
 	      Array {
 		Type			"Cell"
@@ -600,7 +611,7 @@ Model {
 	  }
 	}
 	hdlcoderui.hdlcc {
-	  $ObjectID		  13
+	  $ObjectID		  14
 	  Version		  "1.11.0"
 	  Description		  "HDL Coder custom configuration component"
 	  Name			  "HDL Coder"
@@ -613,7 +624,7 @@ Model {
 	  HDLCActiveTab		  "0"
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  14
+	  $ObjectID		  15
 	  Version		  "1.0"
 	  Array {
 	    Type		    "Cell"
@@ -625,7 +636,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    1
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      15
+	      $ObjectID		      16
 	      Version		      "1.11.0"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -673,14 +684,14 @@ Model {
 	PropName		"Components"
       }
       Name		      "Configuration"
-      CurrentDlgPage	      "Solver"
+      CurrentDlgPage	      "Data Import//Export"
       ConfigPrmDlgPosition     [ 72, 69, 952, 699 ] 
     }
     PropName		    "ConfigurationSets"
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    2
+    $ObjectID		    3
   }
   BlockDefaults {
     ForegroundColor	    "black"
@@ -714,10 +725,75 @@ Model {
     FontAngle		    "normal"
   }
   BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Derivative
+      LinearizePole	      "inf"
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
   }
   System {
     Name		    "Delta"
-    Location		    [2, 82, 989, 698]
+    Location		    [2, 74, 1261, 762]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -731,7 +807,249 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "43"
+    SIDHighWatermark	    "88"
+    Block {
+      BlockType		      Reference
+      Name		      "Body Sensor"
+      SID		      "82"
+      Ports		      [0, 1, 0, 0, 0, 1]
+      Position		      [1520, 370, 1560, 410]
+      LibraryVersion	      "1.1"
+      SourceBlock	      "mblibv1/Sensors & \nActuators/Body Sensor"
+      SourceType	      "Body Sensor"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      GeneratePreprocessorConditionals off
+      UpdateFromCAD	      "off"
+      PhysicalDomain	      "Mechanical"
+      PortType		      "blob"
+      Muxed		      "on"
+      Pose		      "off"
+      Angle		      "on"
+      AngleUnits	      "deg"
+      ArcVelocity	      "off"
+      ArcVelocityUnits	      "deg/s"
+      ArcAcceleration	      "off"
+      ArcAccelerationUnits    "deg/s^2"
+      CoordPosition	      "on"
+      CoordPositionUnits      "m"
+      Velocity		      "off"
+      VelocityUnits	      "m/s"
+      Acceleration	      "off"
+      AccelerationUnits	      "m/s^2"
+      Quaternion	      "on"
+      QuaternionDT	      "off"
+      QuaternionDDT	      "off"
+      QuaternionUnits	      "off"
+      OutputVector	      "[1]"
+      ActiveIO		      "on"
+      Width		      "3"
+      ClassName		      "BodySensor"
+      DialogClass	      "MechanicalSensorBlock"
+      ReferenceFrame	      "Absolute (World)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "44"
+      Position		      [290, 310, 320, 340]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Derivative
+      Name		      "Derivative"
+      SID		      "61"
+      Position		      [320, 195, 350, 225]
+    }
+    Block {
+      BlockType		      Derivative
+      Name		      "Derivative1"
+      SID		      "63"
+      Position		      [320, 485, 350, 515]
+    }
+    Block {
+      BlockType		      Derivative
+      Name		      "Derivative2"
+      SID		      "64"
+      Position		      [320, 620, 350, 650]
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace"
+      SID		      "77"
+      Position		      [125, 133, 190, 157]
+      VariableName	      "signala"
+      SampleTime	      "0"
+      ZeroCross		      on
+      OutputAfterFinalValue   "Holding final value"
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace1"
+      SID		      "78"
+      Position		      [125, 193, 190, 217]
+      VariableName	      "signalb"
+      SampleTime	      "0"
+      ZeroCross		      on
+      OutputAfterFinalValue   "Holding final value"
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace2"
+      SID		      "79"
+      Position		      [125, 253, 190, 277]
+      VariableName	      "signalc"
+      SampleTime	      "0"
+      ZeroCross		      on
+      OutputAfterFinalValue   "Holding final value"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain"
+      SID		      "67"
+      Position		      [320, 130, 350, 160]
+      Gain		      "-1"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain1"
+      SID		      "68"
+      Position		      [320, 440, 350, 470]
+      Gain		      "-1"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain2"
+      SID		      "69"
+      Position		      [320, 560, 350, 590]
+      Gain		      "-1"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Joint Actuator"
+      SID		      "47"
+      Ports		      [1, 0, 0, 0, 0, 0, 1]
+      Position		      [495, 190, 535, 230]
+      LibraryVersion	      "1.1"
+      SourceBlock	      "mblibv1/Sensors & \nActuators/Joint Actuator"
+      SourceType	      "Joint Actuator"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      GeneratePreprocessorConditionals off
+      UpdateFromCAD	      "off"
+      PhysicalDomain	      "Mechanical"
+      PortType		      "blob"
+      ActuationStyle	      "Motion"
+      AngleUnits	      "deg"
+      ArcVelocityUnits	      "deg/s"
+      ArcAccelerationUnits    "deg/s^2"
+      CoordPositionUnits      "mm"
+      VelocityUnits	      "mm/s"
+      AccelerationUnits	      "mm/s^2"
+      ForceUnits	      "N"
+      TorqueUnits	      "N*m"
+      ActiveIO		      "on"
+      Width		      "3"
+      ClassName		      "JointActuator"
+      DialogClass	      "MechanicalActuatorBlock"
+      Primitive		      "P1"
+      ReferenceFrame	      "Absolute (World)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Joint Actuator1"
+      SID		      "54"
+      Ports		      [1, 0, 0, 0, 0, 0, 1]
+      Position		      [495, 480, 535, 520]
+      LibraryVersion	      "1.1"
+      SourceBlock	      "mblibv1/Sensors & \nActuators/Joint Actuator"
+      SourceType	      "Joint Actuator"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      GeneratePreprocessorConditionals off
+      UpdateFromCAD	      "off"
+      PhysicalDomain	      "Mechanical"
+      PortType		      "blob"
+      ActuationStyle	      "Motion"
+      AngleUnits	      "deg"
+      ArcVelocityUnits	      "deg/s"
+      ArcAccelerationUnits    "deg/s^2"
+      CoordPositionUnits      "mm"
+      VelocityUnits	      "mm/s"
+      AccelerationUnits	      "mm/s^2"
+      ForceUnits	      "N"
+      TorqueUnits	      "N*m"
+      ActiveIO		      "on"
+      Width		      "3"
+      ClassName		      "JointActuator"
+      DialogClass	      "MechanicalActuatorBlock"
+      Primitive		      "P1"
+      ReferenceFrame	      "Absolute (World)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Joint Actuator2"
+      SID		      "58"
+      Ports		      [1, 0, 0, 0, 0, 0, 1]
+      Position		      [495, 615, 535, 655]
+      LibraryVersion	      "1.1"
+      SourceBlock	      "mblibv1/Sensors & \nActuators/Joint Actuator"
+      SourceType	      "Joint Actuator"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      GeneratePreprocessorConditionals off
+      UpdateFromCAD	      "off"
+      PhysicalDomain	      "Mechanical"
+      PortType		      "blob"
+      ActuationStyle	      "Motion"
+      AngleUnits	      "deg"
+      ArcVelocityUnits	      "deg/s"
+      ArcAccelerationUnits    "deg/s^2"
+      CoordPositionUnits      "mm"
+      VelocityUnits	      "mm/s"
+      AccelerationUnits	      "mm/s^2"
+      ForceUnits	      "N"
+      TorqueUnits	      "N*m"
+      ActiveIO		      "on"
+      Width		      "3"
+      ClassName		      "JointActuator"
+      DialogClass	      "MechanicalActuatorBlock"
+      Primitive		      "P1"
+      ReferenceFrame	      "Absolute (World)"
+    }
     Block {
       BlockType		      Reference
       Name		      "Machine\nEnvironment"
@@ -757,7 +1075,7 @@ Model {
       ClassName		      "Environment"
       DialogTemplateClass     "MECH.MachineEnvironment"
       SyncWhenCopied	      "off"
-      Gravity		      "[0 0 0]"
+      Gravity		      "[0 -9.81 0]"
       GravityUnits	      "m/s^2"
       GravityAsSignal	      off
       Dimensionality	      "Auto-detect"
@@ -778,6 +1096,36 @@ Model {
       BodyVisualizationType   "Use model default body geometries"
       BodyColorSelMode	      "Use model default"
       DefaultBodyColor	      "[1 0 0]"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      SID		      "46"
+      Ports		      [3, 1]
+      Position		      [435, 191, 440, 229]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      SID		      "55"
+      Ports		      [3, 1]
+      Position		      [435, 481, 440, 519]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      SID		      "59"
+      Ports		      [3, 1]
+      Position		      [435, 616, 440, 654]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
     }
     Block {
       BlockType		      Reference
@@ -1311,7 +1659,7 @@ Model {
       BlockType		      Reference
       Name		      "Printhead-2"
       SID		      "12"
-      Ports		      [0, 0, 0, 0, 0, 6]
+      Ports		      [0, 0, 0, 0, 0, 6, 1]
       Position		      [1375, 332, 1435, 448]
       ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
       LibraryVersion	      "1.1"
@@ -1322,6 +1670,7 @@ Model {
       LeftPortType	      "workingframe"
       RightPortType	      "workingframe"
       LConnTagsString	      "CS2|CS3|CS4|CS5|CS6|CS7"
+      RConnTagsString	      "CG"
       UpdateFromCAD	      "on"
       PMImportedID	      "Printhead-2"
       ClassName		      "Body"
@@ -1340,10 +1689,10 @@ Model {
       GraphicsMode	      "GFXFILE"
       GraphicsFileName	      "Delta - Printhead-2.STL"
       BodyColorSelMode	      "COLORPALETTE"
-      BodyColor		      "[0.752941;0.752941;0.752941]"
+      BodyColor		      "[0.75294 0.75294 0.75294]"
       AttachedToCS	      "CS1"
       CG		      "Right$CG$[0.0186937 0.182574 0.763832]$WORLD$WORLD$m$[-3.8521e-007 0 -1;-1.23652e-012 1 0;1 1.23652e-"
-      "012 -3.8521e-007]$3x3 Transform$rad$WORLD$false$Printhead-2::CG(AUTOGEN)"
+      "012 -3.8521e-007]$3x3 Transform$rad$WORLD$true$Printhead-2::CG(AUTOGEN)"
       WorkingFrames	      "Right$CS1$[0.146711 0.19172 0.763551]$WORLD$WORLD$m$[-3.8521e-007 0 -1;-1.23652e-012 1 0;1 "
       "1.23652e-012 -3.8521e-007]$3x3 Transform$rad$WORLD$false$Printhead-2::CS1(AUTOGEN)#Left$CS2$[-0.0382516 0.186032"
       " 0.783333]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$Printer Arms-3:-:Printhead-2::Printhea"
@@ -1510,8 +1859,8 @@ Model {
       ClassName		      "Ground"
       CoordPosition	      "[0.0186634,0.0298068,0.763791]"
       CoordPositionUnits      "m"
-      StateVectorMgrId	      "0"
-      MachineId		      "[1 0]"
+      StateVectorMgrId	      "1"
+      MachineId		      "[2 0]"
       ShowEnvPort	      on
     }
     Block {
@@ -1600,6 +1949,24 @@ Model {
       CS19Rot		      "[]"
       CS20Pos		      "[]"
       CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      SID		      "83"
+      Ports		      [1]
+      Position		      [1710, 374, 1740, 406]
+      Floating		      off
+      Location		      [1, 48, 1281, 799]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
     }
     Block {
       BlockType		      Reference
@@ -1906,7 +2273,7 @@ Model {
       Name		      "Weld"
       SID		      "14"
       Ports		      [0, 0, 0, 0, 0, 1, 1]
-      Position		      [430, 365, 480, 415]
+      Position		      [435, 365, 485, 415]
       ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
       LibraryVersion	      "1.1"
       SourceBlock	      "mblibv1/Joints/Weld"
@@ -2230,7 +2597,7 @@ Model {
       Name		      "delta type 3D printer-3"
       SID		      "1"
       Ports		      [0, 0, 0, 0, 0, 1, 3]
-      Position		      [560, 359, 620, 431]
+      Position		      [560, 354, 620, 426]
       ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
       LibraryVersion	      "1.1"
       SourceBlock	      "mblibv1/Bodies/Body"
@@ -2328,7 +2695,6 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "Weld"
       SrcPort		      RConn1
-      Points		      [25, 0; 0, 5]
       DstBlock		      "delta type 3D printer-3"
       DstPort		      LConn1
     }
@@ -2336,7 +2702,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "delta type 3D printer-3"
       SrcPort		      RConn1
-      Points		      [25, 0; 0, -185]
+      Points		      [25, 0; 0, -180]
       DstBlock		      "Prismatic"
       DstPort		      LConn1
     }
@@ -2352,7 +2718,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "delta type 3D printer-3"
       SrcPort		      RConn2
-      Points		      [25, 0; 0, -15]
+      Points		      [25, 0; 0, -10]
       DstBlock		      "Prismatic1"
       DstPort		      LConn1
     }
@@ -2367,7 +2733,7 @@ Model {
       LineType		      "Connection"
       SrcBlock		      "delta type 3D printer-3"
       SrcPort		      RConn3
-      Points		      [25, 0; 0, 155]
+      Points		      [25, 0; 0, 160]
       DstBlock		      "Prismatic2"
       DstPort		      LConn1
     }
@@ -2456,21 +2822,6 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      SrcBlock		      "carriage-4"
-      SrcPort		      RConn2
-      Points		      [25, 0; 0, 80]
-      DstBlock		      "Spherical5"
-      DstPort		      LConn1
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Spherical5"
-      SrcPort		      RConn1
-      DstBlock		      "Printer Arms-9"
-      DstPort		      LConn1
-    }
-    Line {
-      LineType		      "Connection"
       SrcBlock		      "RootGround"
       SrcPort		      RConn1
       DstBlock		      "Weld13"
@@ -2493,99 +2844,266 @@ Model {
     }
     Line {
       LineType		      "Connection"
+      SrcBlock		      "Joint Actuator"
+      SrcPort		      RConn1
+      DstBlock		      "Prismatic"
+      DstPort		      LConn2
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "Joint Actuator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      DstBlock		      "Joint Actuator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      DstBlock		      "Joint Actuator2"
+      DstPort		      1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Joint Actuator1"
+      SrcPort		      RConn1
+      Points		      [130, 0; 0, -95]
+      DstBlock		      "Prismatic1"
+      DstPort		      LConn2
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Joint Actuator2"
+      SrcPort		      RConn1
+      Points		      [65, 0; 0, -35]
+      DstBlock		      "Prismatic2"
+      DstPort		      LConn2
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "carriage-4"
+      SrcPort		      RConn2
+      Points		      [25, 0; 0, 80]
+      DstBlock		      "Spherical5"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Spherical5"
+      SrcPort		      RConn1
+      DstBlock		      "Printer Arms-9"
+      DstPort		      LConn1
+    }
+    Line {
+      SrcBlock		      "Derivative2"
+      SrcPort		      1
+      DstBlock		      "Mux2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Derivative1"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Derivative"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [45, 0]
+      Branch {
+	Points			[0, -105]
+	DstBlock		"Mux"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, 185]
+	Branch {
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Branch {
+	  Points		  [0, 135]
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+      }
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Printer Arms-9"
+      SrcPort		      RConn1
+      DstBlock		      "Spherical11"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Spherical11"
+      SrcPort		      RConn1
+      Points		      [35, 0; 0, -275]
+      DstBlock		      "Printhead-2"
+      DstPort		      LConn6
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Spherical10"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -165]
+      DstBlock		      "Printhead-2"
+      DstPort		      LConn5
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Spherical9"
+      SrcPort		      RConn1
+      Points		      [15, 0; 0, -55]
+      DstBlock		      "Printhead-2"
+      DstPort		      LConn4
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Spherical8"
+      SrcPort		      RConn1
+      Points		      [15, 0; 0, 55]
+      DstBlock		      "Printhead-2"
+      DstPort		      LConn3
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Printer Arms-8"
+      SrcPort		      RConn1
+      DstBlock		      "Spherical10"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Printer Arms-7"
+      SrcPort		      RConn1
+      DstBlock		      "Spherical9"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
       SrcBlock		      "Printer Arms-3"
       SrcPort		      RConn1
-      Points		      [20, 0; 0, -35; 95, 0; 0, 35]
       DstBlock		      "Spherical6"
-      DstPort		      RConn1
+      DstPort		      LConn1
     }
     Line {
       LineType		      "Connection"
       SrcBlock		      "Printer Arms-4"
       SrcPort		      RConn1
-      Points		      [20, 0; 0, -35; 95, 0; 0, 35]
       DstBlock		      "Spherical7"
-      DstPort		      RConn1
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Spherical6"
-      SrcPort		      LConn1
-      Points		      [0, 50; 145, 0; 0, 225]
-      DstBlock		      "Printhead-2"
       DstPort		      LConn1
     }
     Line {
       LineType		      "Connection"
       SrcBlock		      "Printer Arms-5"
       SrcPort		      RConn1
-      Points		      [20, 0; 0, -35; 95, 0; 0, 35]
       DstBlock		      "Spherical8"
-      DstPort		      RConn1
+      DstPort		      LConn1
     }
     Line {
       LineType		      "Connection"
       SrcBlock		      "Spherical7"
-      SrcPort		      LConn1
-      Points		      [0, 50; 145, 0; 0, 115]
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, 165]
       DstBlock		      "Printhead-2"
       DstPort		      LConn2
     }
     Line {
       LineType		      "Connection"
-      SrcBlock		      "Spherical8"
-      SrcPort		      LConn1
-      Points		      [0, 55]
-      DstBlock		      "Printhead-2"
-      DstPort		      LConn3
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Spherical9"
-      SrcPort		      LConn1
-      Points		      [0, -55]
-      DstBlock		      "Printhead-2"
-      DstPort		      LConn4
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Spherical10"
-      SrcPort		      LConn1
-      Points		      [0, -40; 145, 0; 0, -125]
-      DstBlock		      "Printhead-2"
-      DstPort		      LConn5
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Spherical11"
-      SrcPort		      LConn1
-      Points		      [0, -40; 145, 0; 0, -235]
-      DstBlock		      "Printhead-2"
-      DstPort		      LConn6
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Printer Arms-7"
+      SrcBlock		      "Spherical6"
       SrcPort		      RConn1
-      Points		      [20, 0; 0, 45; 95, 0; 0, -45]
-      DstBlock		      "Spherical9"
-      DstPort		      RConn1
+      Points		      [35, 0; 0, 275]
+      DstBlock		      "Printhead-2"
+      DstPort		      LConn1
+    }
+    Line {
+      SrcBlock		      "Gain2"
+      SrcPort		      1
+      Points		      [65, 0]
+      DstBlock		      "Mux2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Gain1"
+      SrcPort		      1
+      Points		      [65, 0]
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      Points		      [30, 0; 0, 55]
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From\nWorkspace"
+      SrcPort		      1
+      Points		      [100, 0]
+      Branch {
+	DstBlock		"Gain"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 65]
+	DstBlock		"Derivative"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "From\nWorkspace1"
+      SrcPort		      1
+      Points		      [75, 0; 0, 250]
+      Branch {
+	DstBlock		"Gain1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 45]
+	DstBlock		"Derivative1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "From\nWorkspace2"
+      SrcPort		      1
+      Points		      [40, 0; 0, 310]
+      Branch {
+	DstBlock		"Gain2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 60]
+	DstBlock		"Derivative2"
+	DstPort			1
+      }
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "Body Sensor"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      1
     }
     Line {
       LineType		      "Connection"
-      SrcBlock		      "Printer Arms-8"
+      SrcBlock		      "Printhead-2"
       SrcPort		      RConn1
-      Points		      [20, 0; 0, 45; 95, 0; 0, -45]
-      DstBlock		      "Spherical10"
-      DstPort		      RConn1
-    }
-    Line {
-      LineType		      "Connection"
-      SrcBlock		      "Printer Arms-9"
-      SrcPort		      RConn1
-      Points		      [20, 0; 0, 45; 95, 0; 0, -45]
-      DstBlock		      "Spherical11"
-      DstPort		      RConn1
+      DstBlock		      "Body Sensor"
+      DstPort		      LConn1
     }
   }
 }

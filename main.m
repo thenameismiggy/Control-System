@@ -2,7 +2,7 @@ function main()
 %Main This function shall serve as the main function for the entire system.
 %     All other functions shall stem from this piece of code.
 
-global rodlength printheadoffset columnoffset tooloffset sampling
+global rodlength printheadoffset columnoffset tooloffset
 global previous signala signalb signalc xout yout zout x y z e f
 
 %sets default values of constants which is in mm

@@ -6,11 +6,22 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.35"
+    ComputedModelVersion    "1.41"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
   SavedCharacterEncoding  "windows-1252"
+  slprops.hdlmdlprops {
+    $PropName		    "HDLParams"
+    $ObjectID		    1
+    Array {
+      Type		      "Cell"
+      Dimension		      2
+      Cell		      "HDLSubsystem"
+      Cell		      "Delta"
+      PropName		      "mdlProps"
+    }
+  }
   SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -22,17 +33,17 @@ Model {
   MaxMDLFileLineLength	  120
   UserBdParams		  "PhysicalModelingChecksum;PhysicalModelingParameterChecksum;PhysicalModelingProducts"
   PhysicalModelingChecksum "2364759781"
-  PhysicalModelingParameterChecksum "3738594743"
+  PhysicalModelingParameterChecksum "1847775461"
   PhysicalModelingProducts "SimMechanics"
   Created		  "Tue Dec 27 21:18:48 2016"
   Creator		  "Dot Com"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Dot Com"
+  LastModifiedBy	  "Miggy"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Jan 15 00:44:57 2017"
-  RTWModifiedTimeStamp	  406341889
-  ModelVersionFormat	  "1.%<AutoIncrement:35>"
+  LastModifiedDate	  "Tue Jan 17 16:04:26 2017"
+  RTWModifiedTimeStamp	  406566352
+  ModelVersionFormat	  "1.%<AutoIncrement:41>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -66,7 +77,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    1
+    $ObjectID		    2
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "Delta"
     signals_		    []
@@ -121,16 +132,16 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      2
+      $ObjectID		      3
       Version		      "1.11.0"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  3
+	  $ObjectID		  4
 	  Version		  "1.11.0"
 	  StartTime		  "0.0"
-	  StopTime		  "inf"
+	  StopTime		  "85.0"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -161,7 +172,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  4
+	  $ObjectID		  5
 	  Version		  "1.11.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -173,9 +184,9 @@ Model {
 	  LoadInitialState	  off
 	  SaveFinalState	  off
 	  SaveCompleteFinalSimState off
-	  SaveFormat		  "Array"
+	  SaveFormat		  "StructureWithTime"
 	  SignalLoggingSaveFormat "ModelDataLogs"
-	  SaveOutput		  on
+	  SaveOutput		  off
 	  SaveState		  off
 	  SignalLogging		  on
 	  DSMLogging		  on
@@ -193,7 +204,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  5
+	  $ObjectID		  6
 	  Version		  "1.11.0"
 	  Array {
 	    Type		    "Cell"
@@ -248,7 +259,7 @@ Model {
 	  AccelParallelForEachSubsystem	on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  6
+	  $ObjectID		  7
 	  Version		  "1.11.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -334,7 +345,7 @@ Model {
 	  SFTransitionOutsideNaturalParentDiag "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  7
+	  $ObjectID		  8
 	  Version		  "1.11.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -371,7 +382,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  8
+	  $ObjectID		  9
 	  Version		  "1.11.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -386,7 +397,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  9
+	  $ObjectID		  10
 	  Version		  "1.11.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
@@ -401,7 +412,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  10
+	  $ObjectID		  11
 	  Version		  "1.11.0"
 	  Array {
 	    Type		    "Cell"
@@ -454,7 +465,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      11
+	      $ObjectID		      12
 	      Version		      "1.11.0"
 	      Array {
 		Type			"Cell"
@@ -519,7 +530,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      12
+	      $ObjectID		      13
 	      Version		      "1.11.0"
 	      Array {
 		Type			"Cell"
@@ -602,7 +613,7 @@ Model {
 	  }
 	}
 	hdlcoderui.hdlcc {
-	  $ObjectID		  13
+	  $ObjectID		  14
 	  Version		  "1.11.0"
 	  Description		  "HDL Coder custom configuration component"
 	  Name			  "HDL Coder"
@@ -615,7 +626,7 @@ Model {
 	  HDLCActiveTab		  "0"
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  14
+	  $ObjectID		  15
 	  Version		  "1.0"
 	  Array {
 	    Type		    "Cell"
@@ -627,7 +638,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    1
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      15
+	      $ObjectID		      16
 	      Version		      "1.11.0"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -675,14 +686,14 @@ Model {
 	PropName		"Components"
       }
       Name		      "Configuration"
-      CurrentDlgPage	      "Solver"
+      CurrentDlgPage	      "Data Import//Export"
       ConfigPrmDlgPosition     [ 72, 69, 952, 699 ] 
     }
     PropName		    "ConfigurationSets"
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    2
+    $ObjectID		    3
   }
   BlockDefaults {
     ForegroundColor	    "black"
@@ -781,10 +792,19 @@ Model {
       SampleInput	      off
       SampleTime	      "-1"
     }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+      NumInputs		      "1"
+    }
   }
   System {
     Name		    "Delta"
-    Location		    [2, 82, 989, 698]
+    Location		    [2, 74, 1261, 762]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -798,13 +818,13 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "85"
+    SIDHighWatermark	    "89"
     Block {
       BlockType		      Reference
       Name		      "Body Sensor"
       SID		      "82"
       Ports		      [0, 1, 0, 0, 0, 1]
-      Position		      [1570, 370, 1610, 410]
+      Position		      [1520, 370, 1560, 410]
       LibraryVersion	      "1.1"
       SourceBlock	      "mblibv1/Sensors & \nActuators/Body Sensor"
       SourceType	      "Body Sensor"
@@ -829,7 +849,7 @@ Model {
       ArcAcceleration	      "off"
       ArcAccelerationUnits    "deg/s^2"
       CoordPosition	      "on"
-      CoordPositionUnits      "m"
+      CoordPositionUnits      "mm"
       Velocity		      "off"
       VelocityUnits	      "m/s"
       Acceleration	      "off"
@@ -1661,7 +1681,7 @@ Model {
       LeftPortType	      "workingframe"
       RightPortType	      "workingframe"
       LConnTagsString	      "CS2|CS3|CS4|CS5|CS6|CS7"
-      RConnTagsString	      "CS1"
+      RConnTagsString	      "CS8"
       UpdateFromCAD	      "on"
       PMImportedID	      "Printhead-2"
       ClassName		      "Body"
@@ -1685,15 +1705,17 @@ Model {
       CG		      "Right$CG$[0.0186937 0.182574 0.763832]$WORLD$WORLD$m$[-3.8521e-007 0 -1;-1.23652e-012 1 0;1 1.23652e-"
       "012 -3.8521e-007]$3x3 Transform$rad$WORLD$false$Printhead-2::CG(AUTOGEN)"
       WorkingFrames	      "Right$CS1$[0.146711 0.19172 0.763551]$WORLD$WORLD$m$[-3.8521e-007 0 -1;-1.23652e-012 1 0;1 "
-      "1.23652e-012 -3.8521e-007]$3x3 Transform$rad$WORLD$true$Printhead-2::CS1(AUTOGEN)#Left$CS2$[-0.0382516 0.186032 "
-      "0.783333]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$Printer Arms-3:-:Printhead-2::Printhead"
-      "-2(AUTOGEN)#Left$CS3$[-0.0382516 0.186032 0.744332]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$tr"
-      "ue$Printer Arms-4:-:Printhead-2::Printhead-2(AUTOGEN)#Left$CS4$[0.0302789 0.186032 0.822898]$WORLD$WORLD$m$[1 0 "
-      "0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$Printer Arms-5:-:Printhead-2::Printhead-2(AUTOGEN)#Left$CS5$[0.06405"
-      "46 0.186032 0.803398]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$Printer Arms-7:-:Printhead-"
-      "2::Printhead-2(AUTOGEN)#Left$CS6$[0.0302782 0.186032 0.704766]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$r"
-      "ad$WORLD$true$Printer Arms-8:-:Printhead-2::Printhead-2(AUTOGEN)#Left$CS7$[0.0640539 0.186032 0.724266]$WORLD$WO"
-      "RLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$Printer Arms-9:-:Printhead-2::Printhead-2(AUTOGEN)"
+      "1.23652e-012 -3.8521e-007]$3x3 Transform$rad$WORLD$false$Printhead-2::CS1(AUTOGEN)#Right$CS8$[0 0 0]$WORLD$WORLD"
+      "$m$[-3.8521e-007 0 -1;-1.23652e-012 1 0;1 1.23652e-012 -3.8521e-007]$3x3 Transform$rad$WORLD$true$none#Left$CS2$"
+      "[-0.0382516 0.186032 0.783333]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$Printer Arms-3:-:P"
+      "rinthead-2::Printhead-2(AUTOGEN)#Left$CS3$[-0.0382516 0.186032 0.744332]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 T"
+      "ransform$rad$WORLD$true$Printer Arms-4:-:Printhead-2::Printhead-2(AUTOGEN)#Left$CS4$[0.0302789 0.186032 0.822898"
+      "]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$Printer Arms-5:-:Printhead-2::Printhead-2(AUTOG"
+      "EN)#Left$CS5$[0.0640546 0.186032 0.803398]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$Printe"
+      "r Arms-7:-:Printhead-2::Printhead-2(AUTOGEN)#Left$CS6$[0.0302782 0.186032 0.704766]$WORLD$WORLD$m$[1 0 0;0 1 0;0"
+      " 0 1]$3x3 Transform$rad$WORLD$true$Printer Arms-8:-:Printhead-2::Printhead-2(AUTOGEN)#Left$CS7$[0.0640539 0.1860"
+      "32 0.724266]$WORLD$WORLD$m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$Printer Arms-9:-:Printhead-2::Printh"
+      "ead-2(AUTOGEN)"
       CGPos		      "[0.0186937 0.182574 0.763832]"
       CGRot		      "[-3.8521e-007 0 -1;-1.23652e-012 1 0;1 1.23652e-012 -3.8521e-007]"
       CS0Pos		      "[]"
@@ -1712,8 +1734,8 @@ Model {
       CS6Rot		      "[1 0 0;0 1 0;0 0 1]"
       CS7Pos		      "[0.0640539 0.186032 0.724266]"
       CS7Rot		      "[1 0 0;0 1 0;0 0 1]"
-      CS8Pos		      "[]"
-      CS8Rot		      "[]"
+      CS8Pos		      "[0 0 0]"
+      CS8Rot		      "[-3.8521e-007 0 -1;-1.23652e-012 1 0;1 1.23652e-012 -3.8521e-007]"
       CS9Pos		      "[]"
       CS9Rot		      "[]"
       CS10Pos		      "[]"
@@ -1948,7 +1970,7 @@ Model {
       Ports		      [1]
       Position		      [1710, 374, 1740, 406]
       Floating		      off
-      Location		      [139, 368, 463, 607]
+      Location		      [1, 48, 1281, 799]
       Open		      off
       NumInputPorts	      "1"
       ZoomMode		      "yonly"
@@ -2258,6 +2280,17 @@ Model {
       ClassName		      "Joint"
       DialogClass	      "JointBlock"
       SAxis		      "[0 0 0]"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      SID		      "89"
+      Ports		      [1]
+      Position		      [1645, 325, 1705, 355]
+      VariableName	      "simout"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
     }
     Block {
       BlockType		      Reference
@@ -3041,19 +3074,6 @@ Model {
       DstPort		      1
     }
     Line {
-      LineType		      "Connection"
-      SrcBlock		      "Printhead-2"
-      SrcPort		      RConn1
-      DstBlock		      "Body Sensor"
-      DstPort		      LConn1
-    }
-    Line {
-      SrcBlock		      "Body Sensor"
-      SrcPort		      1
-      DstBlock		      "Scope"
-      DstPort		      1
-    }
-    Line {
       SrcBlock		      "From\nWorkspace"
       SrcPort		      1
       Points		      [100, 0]
@@ -3094,6 +3114,28 @@ Model {
 	DstBlock		"Derivative2"
 	DstPort			1
       }
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "Body Sensor"
+      SrcPort		      1
+      Points		      [40, 0]
+      Branch {
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -50]
+	DstBlock		"To Workspace"
+	DstPort			1
+      }
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Printhead-2"
+      SrcPort		      RConn1
+      DstBlock		      "Body Sensor"
+      DstPort		      LConn1
     }
   }
 }
