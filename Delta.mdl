@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.41"
+    ComputedModelVersion    "1.42"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -39,11 +39,11 @@ Model {
   Creator		  "Dot Com"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Miggy"
+  LastModifiedBy	  "Dot Com"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Jan 17 16:04:26 2017"
-  RTWModifiedTimeStamp	  406566352
-  ModelVersionFormat	  "1.%<AutoIncrement:41>"
+  LastModifiedDate	  "Wed Jan 18 20:21:39 2017"
+  RTWModifiedTimeStamp	  406671690
+  ModelVersionFormat	  "1.%<AutoIncrement:42>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -80,7 +80,6 @@ Model {
     $ObjectID		    2
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "Delta"
-    signals_		    []
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
@@ -88,7 +87,6 @@ Model {
       Cell		      "Delta"
       PropName		      "logAsSpecifiedByModels_"
     }
-    logAsSpecifiedByModelsSSIDs_ []
   }
   RecordCoverage	  off
   CovPath		  "/"
@@ -753,21 +751,6 @@ Model {
       OutputAfterFinalValue   "Extrapolation"
     }
     Block {
-      BlockType		      Gain
-      Gain		      "1"
-      Multiplication	      "Element-wise(K.*u)"
-      ParamMin		      "[]"
-      ParamMax		      "[]"
-      ParamDataTypeStr	      "Inherit: Same as input"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as input"
-      LockScale		      off
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	on
-      SampleTime	      "-1"
-    }
-    Block {
       BlockType		      Mux
       Inputs		      "4"
       DisplayOption	      "none"
@@ -804,7 +787,7 @@ Model {
   }
   System {
     Name		    "Delta"
-    Location		    [2, 74, 1261, 762]
+    Location		    [2, 82, 989, 722]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -919,36 +902,6 @@ Model {
       SampleTime	      "0"
       ZeroCross		      on
       OutputAfterFinalValue   "Holding final value"
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "Gain"
-      SID		      "67"
-      Position		      [320, 130, 350, 160]
-      Gain		      "-1"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "Gain1"
-      SID		      "68"
-      Position		      [320, 440, 350, 470]
-      Gain		      "-1"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "Gain2"
-      SID		      "69"
-      Position		      [320, 560, 350, 590]
-      Gain		      "-1"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Reference
@@ -1872,8 +1825,8 @@ Model {
       ClassName		      "Ground"
       CoordPosition	      "[0.0186634,0.0298068,0.763791]"
       CoordPositionUnits      "m"
-      StateVectorMgrId	      "0"
-      MachineId		      "[1 0]"
+      StateVectorMgrId	      "-1"
+      MachineId		      "[0 0]"
       ShowEnvPort	      on
     }
     Block {
@@ -3053,37 +3006,17 @@ Model {
       DstPort		      LConn1
     }
     Line {
-      SrcBlock		      "Gain2"
-      SrcPort		      1
-      Points		      [65, 0]
-      DstBlock		      "Mux2"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Gain1"
-      SrcPort		      1
-      Points		      [65, 0]
-      DstBlock		      "Mux1"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Gain"
-      SrcPort		      1
-      Points		      [30, 0; 0, 55]
-      DstBlock		      "Mux"
-      DstPort		      1
-    }
-    Line {
       SrcBlock		      "From\nWorkspace"
       SrcPort		      1
       Points		      [100, 0]
       Branch {
-	DstBlock		"Gain"
+	Points			[0, 65]
+	DstBlock		"Derivative"
 	DstPort			1
       }
       Branch {
-	Points			[0, 65]
-	DstBlock		"Derivative"
+	Points			[90, 0; 0, 55]
+	DstBlock		"Mux"
 	DstPort			1
       }
     }
@@ -3092,12 +3025,13 @@ Model {
       SrcPort		      1
       Points		      [75, 0; 0, 250]
       Branch {
-	DstBlock		"Gain1"
+	Points			[0, 45]
+	DstBlock		"Derivative1"
 	DstPort			1
       }
       Branch {
-	Points			[0, 45]
-	DstBlock		"Derivative1"
+	Points			[150, 0]
+	DstBlock		"Mux1"
 	DstPort			1
       }
     }
@@ -3106,12 +3040,13 @@ Model {
       SrcPort		      1
       Points		      [40, 0; 0, 310]
       Branch {
-	DstBlock		"Gain2"
+	Points			[0, 60]
+	DstBlock		"Derivative2"
 	DstPort			1
       }
       Branch {
-	Points			[0, 60]
-	DstBlock		"Derivative2"
+	Points			[185, 0]
+	DstBlock		"Mux2"
 	DstPort			1
       }
     }

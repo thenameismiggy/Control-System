@@ -1,7 +1,11 @@
 G21
 G28
 
-G1 X0 Y0 Z50
+
+G1 X0 Y0 Z0
+G1 X0 Y5 Z0
+G1 X5 Y5 Z0
+G1 X5 Y0 Z0
 
 
 ;sdasda

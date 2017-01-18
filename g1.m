@@ -41,10 +41,10 @@ a1(1) = x + printheadoffset;
 a1(2) = y;
 a1(3) = z + tooloffset;
 b1(1) = x + (printheadoffset * cosd(120));
-b1(2) = x + (printheadoffset * sind(120));
+b1(2) = y + (printheadoffset * sind(120));
 b1(3) = z + tooloffset;
 c1(1) = x + (printheadoffset * cosd(240));
-c1(2) = x + (printheadoffset * sind(240));
+c1(2) = y + (printheadoffset * sind(240));
 c1(3) = z + tooloffset;
 
 %computing for the coordinates of the rod - carriage intersections
@@ -66,9 +66,9 @@ hb = sqrt(abs((rodlength^2) - (ab^2)));
 hc = sqrt(abs((rodlength^2) - (ac^2)));
 
 %computation for final carriage lengths
-xout(1, counter) = 639.1952 - (z + tooloffset + ha);
-yout(1, counter) = 639.1952 - (z + tooloffset + hb);
-zout(1, counter) = 639.1952 - (z + tooloffset + hc);
+xout(1, counter) = (z + tooloffset + ha) - 639.1952;
+yout(1, counter) = (z + tooloffset + hb) - 639.1952;
+zout(1, counter) = (z + tooloffset + hc) - 639.1952;
 
 counter = counter + 1;
 
