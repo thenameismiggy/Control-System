@@ -66,9 +66,9 @@ hb = sqrt(abs((rodlength^2) - (ab^2)));
 hc = sqrt(abs((rodlength^2) - (ac^2)));
 
 %computation for final carriage lengths
-xout(1, counter) = 463.7886 - (z + tooloffset + ha);
-yout(1, counter) = 463.7886 - (z + tooloffset + hb);
-zout(1, counter) = 463.7886 - (z + tooloffset + hc);
+xout(1, counter) = 639.1952 - (z + tooloffset + ha);
+yout(1, counter) = 639.1952 - (z + tooloffset + hb);
+zout(1, counter) = 639.1952 - (z + tooloffset + hc);
 
 counter = counter + 1;
 

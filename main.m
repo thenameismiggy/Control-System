@@ -6,9 +6,9 @@ global rodlength printheadoffset columnoffset tooloffset
 global previous signala signalb signalc xout yout zout x y z e f
 
 %sets default values of constants which is in mm
-rodlength = 22.8346;
+rodlength = 228.346;
 printheadoffset = 57.15;
-columnoffset = 14.2748;
+columnoffset = 142.748;
 tooloffset = 7.5;
 
 %set default values of positions in case some of the parameters are not set
@@ -61,9 +61,9 @@ while (~feof(fid)) %while end of file has not been reached
                     columnoffset = 5.62;
 					tooloffset = 0.2953;
                 case 21    %set units to mm
-                    rodlength = 22.8346;
+                    rodlength = 228.346;
                     printheadoffset = 57.15;
-                    columnoffset = 14.2748;
+                    columnoffset = 142.748;
 					tooloffset = 7.5;
                 case 28    %move to origin
 					previous = [0 0 0];
